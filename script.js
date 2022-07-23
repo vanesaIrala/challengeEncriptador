@@ -2,6 +2,8 @@ const inputText = document.querySelector(".input-text");
 const mensaje = document.querySelector(".input-text-area");
 
 function btnencriptar() {
+    var valor = 'none'
+    document.getElementById('derecha_id').style.backgroundImage = valor;
     const textoEncriptado = encriptar(inputText.value);
     mensaje.value = textoEncriptado;
 }
@@ -26,27 +28,27 @@ function encriptar(StringParaEncriptar) {
     return StringParaEncriptar;
 }
 
-function btndesencriptar(){
+function btndesencriptar() {
 
     const textoDesencriptado = desencriptar(inputText.value);
     mensaje.value = textoDesencriptado;
 
 }
 
-function desencriptar(StringParaDesencriptar){
- 
-    var txtCifrado = StringParaDesencriptar.replace(/enter/igm,"e");
-    var txtCifrado = txtCifrado.replace(/ober/igm,"o");
-    var txtCifrado = txtCifrado.replace(/imes/igm,"i");
-    var txtCifrado = txtCifrado.replace(/ai/igm,"a");
-    var txtCifrado = txtCifrado.replace(/ufat/igm,"u");
+function desencriptar(StringParaDesencriptar) {
+
+    var txtCifrado = StringParaDesencriptar.replace(/enter/igm, "e");
+    var txtCifrado = txtCifrado.replace(/ober/igm, "o");
+    var txtCifrado = txtCifrado.replace(/imes/igm, "i");
+    var txtCifrado = txtCifrado.replace(/ai/igm, "a");
+    var txtCifrado = txtCifrado.replace(/ufat/igm, "u");
 
     StringParaDesencriptar = txtCifrado;
     console.log(StringParaDesencriptar);
     return StringParaDesencriptar;
 }
 
-function copiar(){
+function copiar() {
     const content = document.getElementById('textoCopiado');
     content.select();
     document.execCommand('copy');

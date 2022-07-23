@@ -10,17 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="document.getElementById('fuente').focus();">
     <div class="container">
         <div class="logo">
             <img src="./imagenes/Logo.png">
         </div>
-    
-        <div class="izquierda" >
-            <textarea rows="6" cols="40" placeholder="Ingrese el texto aquí" class="input-text"></textarea>
-            
+
+        <div class="izquierda">
+            <textarea rows="6" cols="40" placeholder="Ingrese el texto aquí" class="input-text" id="fuente"></textarea>
+
         </div>
-        <div class="derecha">
+        <div class="derecha" id="derecha_id">
             <textarea type="text" cols="18" rows="8" class="input-text-area" id="textoCopiado"> 
             </textarea>
             <button type="button" class="btn-copiar" id="boton_copiar" onclick="copiar()">Copiar</button>
@@ -34,4 +34,5 @@
 
 </body>
 <script src="script.js"></script>
+
 </html>
